@@ -4,7 +4,7 @@
 #
 Name     : mvn-xmlParserAPIs
 Version  : 2.6.2
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar
 Source0  : https://repo1.maven.org/maven2/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar
 Source1  : https://repo1.maven.org/maven2/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.pom
@@ -25,15 +25,16 @@ data components for the mvn-xmlParserAPIs package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xerces/xmlParserAPIs/2.6.2
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/xerces/xmlParserAPIs/2.6.2
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/xerces/xmlParserAPIs/2.6.2
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/xerces/xmlParserAPIs/2.6.2
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.pom
 
 
 %files
